@@ -16,6 +16,9 @@ function SignFiles() {
     [string[]]$filePaths
   )
 
+  Write-Output "Force bypass signing."
+  Return
+  
   if (!(Get-Command "azuresigntool" -ErrorAction SilentlyContinue)) {
     Write-Output "Skipping signing because AzureSignTool is not installed."
     Return
